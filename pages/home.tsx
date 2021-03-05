@@ -2,11 +2,11 @@ import {
     Heading, Grid, GridItem, Flex, Spacer, Box, Button, Link,
 } from "@chakra-ui/react"
 import theme from '../styles/theme';
+import Produtos from "./produtos";
 
 export default function Home() {
     return (
-        <Grid
-            as="main"
+        <Grid            
             height="100vh"
             templateColumns="1fr 1080px 1fr"
             templateRows="200px 50px 1fr "
@@ -18,7 +18,7 @@ export default function Home() {
             justifyContent="center"
         >
             <Flex gridArea="direita">
-                <Box w="100%" h="100%" bg="brand.100">  </Box>
+                <Box bg="brand.100"> </Box>
             </Flex>
             {/* Cabeçalho */}
             <Flex gridArea="cabecalho" bg="brand.100" flexDir="row">
@@ -38,12 +38,15 @@ export default function Home() {
                 <Box p="5%"><Link>CONTATOS</Link></Box>
             </Flex>
             <Flex gridArea="principal" >
-                <Box w="100%" bg="yellow.900">espaço produtos</Box>
+                <Box >
+                    <Produtos largura={'100vh'} ></Produtos>
+
+                </Box>
                 <Box bg="brand.100" ml="5">
                     espaço barra lateral
                     <Box p="3" m="5" bg="yellow.700" w="200px" h="200px">banner</Box>
-                    <Box p="3" m="5" bg="yellow.700" w="200px" h="200px">banner</Box>
-                    <Box p="3" m="5" bg="yellow.700" w="200px" h="200px">banner</Box>
+                    <Box >banner</Box>
+                    <Box >banner</Box>
                 </Box>
             </Flex>
             <Flex gridArea="esquerda">

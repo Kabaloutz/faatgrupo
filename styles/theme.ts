@@ -9,10 +9,13 @@ const theme = extendTheme({
       900: "#1a202c",
     },
     yellow: {
-        700: "#975A16",
-        // ...
-        900: "#1a202c",
-      },
+      700: "#975A16",
+      // ...
+      900: "#1a202c",
+    },
+    white: {
+      100: "#ffffff",
+    },
   },
   styles: {
     global: {
@@ -20,7 +23,7 @@ const theme = extendTheme({
       body: {
         bg: "#f7fafc",
         color: "white",
-        
+
       },
       // styles for the `a`
       a: {
@@ -28,7 +31,7 @@ const theme = extendTheme({
         _hover: {
           textDecoration: "underline",
         },
-    
+
       },
     },
   },
