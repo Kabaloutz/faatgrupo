@@ -26,8 +26,8 @@ export default function Home() {
                 <Box p="20"><img src="/slogan.png" alt="Nosso Slogan: A escolha certa para sua obra" /></Box>
                 <Box p="10"><img src="/mascote.png" alt="Tijolito mascote do grupo" /></Box>
             </Flex>
-            <Flex gridArea="menu" bg="yellow.700" mr={25px} alignItems="center" justifyContent="center" flexDir="row" >
-                <Box  ><Link>HOME</Link></Box>
+            <Flex gridArea="menu" bg="yellow.700" mb="3" alignItems="center" justifyContent="center" flexDir="row" >
+                <Box p="5%"><Link>HOME</Link></Box>
                 <Spacer />
                 <Box  ><Link>EMPRESA</Link></Box>
                 <Spacer />
@@ -35,21 +35,20 @@ export default function Home() {
                 <Spacer />
                 <Box ><Link>SIMULADOR</Link></Box>
                 <Spacer />
-                <Box ><Link>CONTATOS</Link></Box>
+                <Box p="5%"><Link>CONTATOS</Link></Box>
             </Flex>
-            <Flex gridArea="principal" bg="yellow.900">
-                <Box  w="100%">espaço produtos</Box>
-                <Box  >
+            <Flex gridArea="principal" >
+                <Box w="100%" bg="yellow.900">espaço produtos</Box>
+
+                <Box bg="brand.100" ml="5">
                     espaço barra lateral
-                    <Box p="3" bg="yellow.700" w="200px" h="200px">banner</Box>
-                    
-                    <Box p="3" bg="yellow.700" w="200px" h="200px">banner</Box>
-                    <Spacer />
-                    <Box p="3" bg="yellow.700" w="200px" h="200px">banner</Box>
+                    <Box p="3" m="5" bg="yellow.700" w="200px" h="200px">banner</Box>
+                    <Box p="3" m="5" bg="yellow.700" w="200px" h="200px">banner</Box>
+                    <Box p="3" m="5" bg="yellow.700" w="200px" h="200px">banner</Box>
                 </Box>
             </Flex>
             <Flex gridArea="esquerda">
-           
+
             </Flex>
         </Grid>
 

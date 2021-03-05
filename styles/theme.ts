@@ -20,6 +20,7 @@ const theme = extendTheme({
       body: {
         bg: "#f7fafc",
         color: "white",
+        
       },
       // styles for the `a`
       a: {
@@ -27,6 +28,7 @@ const theme = extendTheme({
         _hover: {
           textDecoration: "underline",
         },
+    
       },
     },
   },
