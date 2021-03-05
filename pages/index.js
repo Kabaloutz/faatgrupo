@@ -19,7 +19,7 @@ export async function getStaticProps() {
 export default ({ songs }) => (
   <>
     <Heading mt={8} mb={4} fontWeight="800">
-      My Songs
+       Produtos
     </Heading>
     <List>
       {songs.map((song) => (
