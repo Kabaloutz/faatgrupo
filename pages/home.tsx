@@ -7,22 +7,32 @@ export default function Home() {
         <Grid
             as="main"
             height="100vh"
-            templateColluns="1fr 500px 500px 1fr"
-            templateRows="200px 100px 1fr "
+            templateColluns="1fr 1fr 1fr"
+            templateRows="200px 50px 1fr "
             templateAreas="
-            '. logo tijolito  . '
-            '. produto lateral .'            
+            '. cabecalho .'
+            'direita menu esquerda'   
+            'direita principal esquerda'          
             "
-            justfyContent="center"
             alingItems="center"
+            justfyContent="center"
         >
-
-            <Flex gridArea="logo" >
-                <Box p="10" bg="brand.100"><img src="/faatlogo.png" alt="logo do grupo faat" /> </Box>
-                <Box p="10" bg="brand.100"><img src="/slogan.png" alt="Nosso Slogan: A escolha certa para sua obra" /></Box>
+            <Flex gridArea="direita">
+                <Box w="100%" h="100%" bg="brand.900">  </Box>
             </Flex>
-            <Flex gridArea="tijolito">
+            {/* Cabeçalho */}
+            <Flex gridArea="cabecalho"  bg="yellow.700" center>
+                <Box p="20" bg="brand.900" ><img src="/faatlogo.png" alt="logo do grupo faat" /> </Box>
+                <Spacer />
+                <Box p="20"><img src="/slogan.png" alt="Nosso Slogan: A escolha certa para sua obra" /></Box>
+                <Spacer />
                 <Box p="10" bg="brand.900"><img src="/mascote.png" alt="Tijolito mascote do grupo" /></Box>
+            </Flex>
+            <Flex gridArea="menu">
+                <Box bg="yellow.700" w="100%"> f</Box>
+            </Flex>
+            <Flex gridArea="esquerda">
+                <Box w="100%" h="100%" bg="brand.900">f </Box>
             </Flex>
         </Grid>
 
