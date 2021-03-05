@@ -1,4 +1,4 @@
-import {  Heading, Grid, GridItem Flex, Spacer} from "@chakra-ui/react"
+import {  Heading, Grid, GridItem, Flex, Spacer} from "@chakra-ui/react"
 
 
 export default function Home () {
