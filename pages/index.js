@@ -22,7 +22,7 @@ export default ({ songs }) => (
     </Heading>
     <List>
       {songs.map((song) => (
-        <Song key={song.id} {...song} />
+        <h1>ss</h1>
       ))}
     </List>
   </>
