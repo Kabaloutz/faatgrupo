@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client';
-import { List, Heading } from '@chakra-ui/core';
+import { List, Heading } from '@chakra-ui/react';
 
 import Song from '../components/Song';
 
