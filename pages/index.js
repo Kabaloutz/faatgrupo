@@ -1,7 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import { List, Heading } from '@chakra-ui/react';
 
-import Song from '../components/Song';
 
 export async function getStaticProps() {
   const prisma = new PrismaClient();
