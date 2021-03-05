@@ -39,7 +39,6 @@ export default function Home() {
             </Flex>
             <Flex gridArea="principal" >
                 <Box w="100%" bg="yellow.900">espaço produtos</Box>
-
                 <Box bg="brand.100" ml="5">
                     espaço barra lateral
                     <Box p="3" m="5" bg="yellow.700" w="200px" h="200px">banner</Box>
