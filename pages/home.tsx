@@ -15,9 +15,9 @@ export default function Home() {
             'direita menu esquerda'   
             'direita principal esquerda'          
             "
-            templateCollumns="1fr 480px 80px1fr"
-            alingItems="center"
-            justfyContent="center"
+            templateColumns="1fr 480px 80px1fr" 
+            alignItems="center" 
+            justifyContent="center" 
         >
             <Flex gridArea="direita">
                 <Box w="100%" h="100%" bg="brand.100">  </Box>
