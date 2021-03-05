@@ -39,7 +39,7 @@ export default function Home() {
             </Flex>
             <Flex gridArea="principal" >
                 <Box >
-                    <Produtos largura={'100vh'} ></Produtos>
+                    <Produtos  ></Produtos>
 
                 </Box>
                 <Box bg="brand.100" ml="5">
