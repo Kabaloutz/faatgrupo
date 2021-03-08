@@ -7,7 +7,9 @@ import Titulo from "../components/barraTitulos";
 import Menu from "../components/menu";
 import Cabecalho from "../components/cabecalho";
 import BarraBanners from "../components/barraBanners";
-import Carrossel from "../components/Carrossel";
+import Carrossel from "../components/carrossel";
+import Quadros from "../components/Quadros";
+
 
 
 export default function Home() {
@@ -21,16 +23,18 @@ export default function Home() {
                 'direita menu .' 
                 'direita . .'         
                 'direita carrossel .' 
+                'direita quadros esquerda' 
                 'direita . esquerda' 
                 'direita titulo .'     
                 'direita principal .'          
                 "
         >
             <Flex gridArea="direita"></Flex>
-            {/* Cabeçalho */}         
+            {/* Cabeçalho */}
             <Cabecalho></Cabecalho>
-            <Menu></Menu>               
-            <Carrossel></Carrossel>
+            <Menu></Menu>
+            <Carrossel ></Carrossel>            
+            <Quadros gridArea="quadros"></Quadros>
             <Titulo titulo="CONTRUINDO SONHOS"></Titulo>
             <Flex gridArea="principal" >
                 <Box w="100%"></Box>
