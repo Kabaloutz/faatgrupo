@@ -51,13 +51,7 @@ A busca contínua a adequação às normas da ABNT resulta em produtos com alto 
 "
                         link="/"
                     />
-                    <BannerHor imag="/processo_imagem.jpg"
-                        titulo="/"
-                        text="
-A Cerâmica Primavera investe em tecnologia de ponta para garantir a qualidade e segurança em todo o processo de fabricação dos seus produtos.
-A busca contínua a adequação às normas da ABNT resulta em produtos com alto padrão de qualidade e uniformidade.
-"
-                    ></BannerHor>
+                    <BannerHor ></BannerHor>
                 </Box>
                 <BarraBanners gridArea="esquerda"></BarraBanners>
 
