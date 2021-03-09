@@ -11,7 +11,7 @@ const Produtos: React.FC = ({ largura }) => {
 
     }
     return (
-        <HStack spacing="25px" color="black" w="100%" bg="white">
+        <HStack spacing="25px" color="black" w="100%" bg="white" alignItems="center" justifyItems="center">
             <Box p='5'>
                 <Image src={property.imageUrl} alt={property.imageAlt} />
             </Box>

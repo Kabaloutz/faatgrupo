@@ -9,7 +9,7 @@ const theme = extendTheme({
       900: "#1a202c",
     },
     yellow: {
-      700: "#975A16",
+      700: "#61260D",
       // ...
       900: "#1a202c",
     },
@@ -21,8 +21,8 @@ const theme = extendTheme({
     global: {
       // styles for the `body`
       body: {
-        bg: "#f7fafc",
-        color: "white",
+        bg: "#9E9A98",
+        color: "#fff",
 
       },
       // styles for the `a`

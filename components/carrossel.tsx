@@ -1,54 +1,75 @@
-import { Box, Container, Flex, HStack, Text, Image, Heading, IconButton } from '@chakra-ui/react';
+import { Box, Container, Flex, HStack, Text, Image, Heading, IconButton, Icon, Circle } from '@chakra-ui/react';
 import { PhoneIcon, ArrowRightIcon, ArrowLeftIcon } from '@chakra-ui/icons'
 import React from 'react';
-import {useState} from 'react';
+import { useState } from 'react';
 
 const Carrossel: React.FC = () => {
-    const [atual,setAtual] = useState(["/banner1_1.jpg", "/banner2_1.jpg", "/banner3_1.jpg", "/banner4_1.jpg"]);
-    const property = {
-        imageUrl: ["/banner1_1.jpg", "/banner2_1.jpg", "/banner3_1.jpg", "/banner4_1.jpg"],
-        imageAlt: "jgrs f ydyt fcytfdyiy",
+    const [posicoes, setPosicoes] = useState([1,2,3,4]);
+    const [atual, setAtual] = useState(1);
+    const Avancar = () => {
+        let p= posicoes;
+        p.push(p.shift());
+        setPosicoes(p);
+        setAtual(posicoes[2]);        
+        loadData();
+        return atual;
     }
-    function Avacnar(){
-        setAtual(atual+1)        
-        console.log(atual);
+    const Retroceder = () => {
+        let p= posicoes;
+        let b = p.pop();
+        p.unshift(b);   
+        setPosicoes(p);
+        setAtual(posicoes[2]);
+        loadData();
+        return atual;
     }
-    function Atual(){        
-        console.log(atual);
-        return  atual;
-    }
-    function Retroceder(){
-        setAtual(atual+1)        
-        console.log(atual);
-    }
+
+    function timeout(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+    
+      async function request() {
+        await timeout(5000);
+        Avancar();
+        loadData();
+        return atual;
+      }
+      React.useEffect(() => {
+        async function loadData() {
+          const response = await request();
+        }
+    
+        loadData();
+      }, []);
+      async function loadData(){
+          return atual;
+      }
     return (
         <Flex gridArea="carrossel">
 
-            <HStack spacing="25px" color="black" w="1000px" d="flex" bg="white">
+            <HStack spacing="25px"  d="flex"  color="gray.600">
+
                 <Box >
-                    <IconButton onClick={Retroceder}
-                        colorScheme="teal"
+                    <IconButton  h="300px" onClick={Avancar}
+                        colorScheme="gray"
                         aria-label="Call Segun"
                         size="lg"
                         icon={<ArrowLeftIcon />}
                     />
                 </Box>
-                <Box w="150px">
-                    <Image src={"/banne"+"{atual}"+"_1.jpg"} alt={property.imageAlt} />
+
+                <Box  h="100%">
+                    <Image h="100%" w="100%" src={atual+".jpg"} />
                 </Box>
-                <Box bg="blue"  >
-                    <Image h="100%" w="100%" src={"/banne"+"{atual}"+"_1.jpg"} alt={property.imageAlt} />
-                </Box>
-                <Box w="150px">
-                    <Image src={"/banne"+"{atual}"+"_1.jpg"} alt={property.imageAlt} />
-                </Box>
-                <Box>
-                    <IconButton onClick={Avacnar}
-                        colorScheme="teal"
+
+                <Box >
+                    <IconButton  h="300px" onClick={Retroceder}
+                        colorScheme="gray"
                         aria-label="Call Segun"
                         size="lg"
                         icon={<ArrowRightIcon />}
                     />
+                    
                 </Box>
             </HStack>
 
@@ -56,4 +77,5 @@ const Carrossel: React.FC = () => {
     )
 
 }
-export default Carrossel;
+
+export default Carrossel

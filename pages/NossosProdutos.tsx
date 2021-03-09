@@ -7,28 +7,29 @@ import Produtos from "../components/produtos";
 import Titulo from "../components/barraTitulos";
 import Menu from "../components/menu";
 import Cabecalho from "../components/cabecalho";
-import BarraBanners from "../components/barraBanners";
+import BarraBannersProdutos from "../components/barraBannersProdutos";
+import Rodape from "../components/rodape";
 
 export default function NossosProdutos() {
     return (
         <Grid
             height="100vh"
             templateColumns="1fr 1080px 1fr"
-            templateRows="200px 50px 30px 50px 1fr "
+            templateRows="200px 50px 20px 60px 1fr 90px"
             templateAreas="
             '. cabecalho .'
-            'direita menu esquerda' 
-            'direita . esquerda' 
-            'direita titulo esquerda'     
-            'direita principal esquerda'          
-            "
-            justifyContent="center"
+            '. menu .' 
+            '. . .'          
+                '. titulo .'     
+                '. principal .'   
+                '. rodape .'         
+                "
         >
-            <Flex gridArea="direita"></Flex>
+            <Flex></Flex>
             {/* Cabeçalho */}
             <Cabecalho></Cabecalho>
-            <Menu></Menu>
-            <Titulo titulo="PRODUTOS"></Titulo>
+            <Menu ></Menu>
+            <Titulo gridArea="titulo" titulo="PRODUTOS"></Titulo>
             <Flex gridArea="principal"   >
                 <Box flexDir="column" >
                     <VStack spacing="25px" color="black">
@@ -37,9 +38,11 @@ export default function NossosProdutos() {
                         <Produtos  ></Produtos>
                     </VStack>
                 </Box>
-            <BarraBanners></BarraBanners>
+            <BarraBannersProdutos></BarraBannersProdutos>
             </Flex>
-            <Flex gridArea="esquerda"></Flex>
+            <Rodape />
+            
+            <Flex></Flex>
         </Grid>
 
     )
