@@ -1,4 +1,4 @@
-import { Box, Container, Flex, HStack, Text, Image, spacer, Link, Heading } from '@chakra-ui/react';
+import { Box, Container, Flex, HStack, Text, Image,  Link, Heading } from '@chakra-ui/react';
 import React from 'react';
 
 const BarraBanners: React.FC = ({ largura, title }) => {
