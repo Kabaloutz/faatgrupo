@@ -4,7 +4,7 @@ import React from 'react';
 import {useState} from 'react';
 
 const Carrossel: React.FC = () => {
-    const [atual,setAtual] = useState(1);
+    const [atual,setAtual] = useState(["/banner1_1.jpg", "/banner2_1.jpg", "/banner3_1.jpg", "/banner4_1.jpg"]);
     const property = {
         imageUrl: ["/banner1_1.jpg", "/banner2_1.jpg", "/banner3_1.jpg", "/banner4_1.jpg"],
         imageAlt: "jgrs f ydyt fcytfdyiy",
