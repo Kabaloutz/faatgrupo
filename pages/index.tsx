@@ -8,25 +8,27 @@ import Menu from "../components/menu";
 import Cabecalho from "../components/cabecalho";
 import BarraBanners from "../components/barraBanners";
 import Carrossel from "../components/carrossel";
-import Quadros from "../components/Quadros";
+import Quadros from "../components/quadros";
 
 
 
 export default function Home() {
-    return (
+
+    return (       
         <Grid
             height="100vh"
             templateColumns="1fr 1080px 1fr"
-            templateRows="200px 50px 30px 300px 30px 50px 1fr "
+            templateRows="200px 50px 30px 300px 30px 300px 50px 1fr "
             templateAreas="
                 '. cabecalho .'
-                'direita menu .' 
-                'direita . .'         
-                'direita carrossel .' 
-                'direita quadros esquerda' 
-                'direita . esquerda' 
-                'direita titulo .'     
-                'direita principal .'          
+                '. menu .' 
+                '. . .'         
+                '. carrossel .' 
+                '. . .'  
+                '. quadros esquerda' 
+                '. . esquerda' 
+                '. titulo .'     
+                '. principal .'          
                 "
         >
             <Flex gridArea="direita"></Flex>
@@ -34,7 +36,7 @@ export default function Home() {
             <Cabecalho></Cabecalho>
             <Menu></Menu>
             <Carrossel ></Carrossel>            
-            <Quadros gridArea="quadros"></Quadros>
+            <Quadros></Quadros>
             <Titulo titulo="CONTRUINDO SONHOS"></Titulo>
             <Flex gridArea="principal" >
                 <Box w="100%"></Box>
