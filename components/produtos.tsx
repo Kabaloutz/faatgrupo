@@ -1,7 +1,7 @@
 import { Box, Container, Flex, HStack, Text, Image, space, Heading } from '@chakra-ui/react';
 import React from 'react';
 
-const Produtos: React.FC = ({ largura }) => {
+const Produtos: React.FC = () => {
     const property = {
         imageUrl: "/laje_s1_1.jpg",
         imageAlt: "Rear view of modern home with pool",

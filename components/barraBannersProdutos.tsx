@@ -1,7 +1,7 @@
 import { Box, Container, Flex, Stack, HStack, VStack, Text, Image,  Link, Heading } from '@chakra-ui/react';
 import React from 'react';
 
-const BarraBannersProdutos: React.FC = ({ largura, title }) => {
+const BarraBannersProdutos: React.FC = () => {
     const property = {
         title: "PRODUTOS",
         largura: "80%",
