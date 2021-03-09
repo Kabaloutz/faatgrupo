@@ -5,7 +5,7 @@ const Quadro: React.FC = () => {
 
     return (
         <Box w="200px" h="300px" borderColor="gray.600" border="5px" bg="white" align="center" justifyContent="center" shadow="xl" color="gray.600" >
-            <Image src="/t_001.jpg" p='2' />
+            <Image src="/t_001.jpg" p='2' ></Image>
             <Heading size="md" >"HISTÓRIA"</Heading>
             <br></br>
             <Text>
@@ -13,7 +13,7 @@ const Quadro: React.FC = () => {
             </Text>
         </Box>
         <Box w="200px" h="300px" borderColor="gray.600" border="5px" bg="white" align="center" justifyContent="center" shadow="xl" color="gray.600"> 
-        <Image src="/processo_imagem.jpg" p='2' />
+        <Image src="/processo_imagem.jpg" p='2'></Image>
         <Heading size="md" >"PROCESSO PRODUTIVO"</Heading>
         <br></br>
         <Text>
@@ -21,7 +21,7 @@ const Quadro: React.FC = () => {
         </Text>
     </Box>
     <Box w="200px" h="300px" borderColor="gray.600" border="5px" bg="white" align="center" justifyContent="center" shadow="xl" color="gray.600" >
-    <Image src="/simulador_imagem_1.jpg" p='2' />
+    <Image src="/simulador_imagem_1.jpg" p='2'></Image>
     <Heading size="md" >"SIMULADOR"</Heading>
     <br></br>
     <Text>
