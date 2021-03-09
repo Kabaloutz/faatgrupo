@@ -1,7 +1,7 @@
 import { Box, Container, Flex, HStack, Text, Image, Spacer, Link, Heading } from '@chakra-ui/react';
 import React from 'react';
 
-const Menu: React.FC = ({ }) => {
+const Menu: React.FC = () => {
     return (
         <Flex gridArea="menu" bg="yellow.700" mb="3" alignItems="center" justifyContent="center" flexDir="row" >
                 <Box p="5%"><Link href="/">HOME</Link></Box>
