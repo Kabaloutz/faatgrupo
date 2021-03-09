@@ -20,7 +20,7 @@ export default function Home() {
         <Grid
             height="100vh"
             templateColumns="1fr 1080px 1fr"
-            templateRows="200px 50px 40px 300px 30px 300px 50px 60px 1fr 90px"
+            templateRows="200px 50px 40px 300px 50px 300px 50px 60px 1fr 90px"
             templateAreas="
                 '. cabecalho .'
                 '. menu .' 
