@@ -1,7 +1,7 @@
 import { Box, Container, Flex, HStack, Text, Image,  Link, Heading } from '@chakra-ui/react';
 import React from 'react';
 
-const Titulo: React.FC = ({ titulo }) => {
+const Titulo: React.FC = (titulo) => {
     const property = {
         titulo: titulo,
     }

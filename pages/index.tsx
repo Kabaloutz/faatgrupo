@@ -43,9 +43,7 @@ export default function Home() {
             <Titulo titulo="CONTRUINDO SONHOS"></Titulo>
             <Flex gridArea="principal" >
                 <Box >
-                    <QuadroTexto
-Link="/"
-                    />
+                    <QuadroTexto />
                     <BannerHor ></BannerHor>
                 </Box>
                 <BarraBanners ></BarraBanners>
