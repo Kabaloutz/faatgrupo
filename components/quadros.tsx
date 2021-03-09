@@ -9,16 +9,16 @@ const Quadros: React.FC = () => {
         <HStack gridArea="quadros" align="center" justifyContent="center">
             <Wrap spacing="80px">
                 <WrapItem>
-                    <Quadro imag="/t_001.jpg" titulo="HISTÓRIA" text="Conheça mais sobre a história da Cerâmica Primavera."/>
+                    <Quadro />
                 </WrapItem>
                 <WrapItem>
-                    <Quadro imag="/processo_imagem.jpg" titulo="PROCESSO PRODUTIVO" text="Como são produzidos nossos produtos? Saiba mais..."/>
+                    <Quadro />
                 </WrapItem>
                 <WrapItem>
-                    <Quadro imag="/simulador_imagem_1.jpg" titulo="SIMULADOR" text="Calcule a quantidade necessária de tijolos para a sua obra."/>
+                    <Quadro />
                 </WrapItem>
                 <WrapItem>
-                    <Quadro imag="/trabalheconosco.jpg" titulo="TRABALHE CONOSCO" text="Venha fazer parte da nossa equipe. Envie seu currículo!"/>
+                    <Quadro />
                 </WrapItem>
             </Wrap>
         </HStack>
