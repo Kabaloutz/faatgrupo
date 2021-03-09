@@ -1,7 +1,7 @@
 import { Box, Container, Flex, HStack, Text, Image, Link, Heading } from '@chakra-ui/react';
 import React from 'react';
 
-const Quadro: React.FC = ( imag, titulo, text ) => {
+const Quadro: React.FC = ( imag: string, titulo: string, text: string ) => {
     const property = {
         imag: imag,
         titulo: titulo,
