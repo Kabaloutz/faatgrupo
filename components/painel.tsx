@@ -2,9 +2,7 @@ import { Box, Container, Flex, HStack, Text, Image, Link, Heading, Wrap, WrapIte
 import React from 'react';
 import Quadro from './quadro'
 const Painel: React.FC = () => {
-    const property = {
 
-    }
     return (
         <HStack gridArea="Painel" align="center" justifyContent="center">
             <Wrap w="100%" align="center" spacing="92px">

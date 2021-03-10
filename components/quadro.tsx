@@ -8,7 +8,7 @@ const Quadro: React.FC = () => {
             <Image m="2" src="/t_001.jpg"  ></Image>
             <Heading m="2" size="md" >"HISTÓRIA"</Heading>
             <Text>
-                "Conheça mais sobre a história da Cerâmica Primavera."
+                "Conheça mais sobre a história do grupo Faat."
             </Text>
         </Box>
         

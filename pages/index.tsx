@@ -40,7 +40,7 @@ export default function Home() {
             <Menu></Menu>
             <Carrossel ></Carrossel>
             <Painel></Painel>
-            <Titulo titulo="CONTRUINDO SONHOS"></Titulo>
+            <Titulo title="CONTRUINDO SONHOS"></Titulo>
             <Flex gridArea="principal" >
                 <Box >
                     <QuadroTexto />
