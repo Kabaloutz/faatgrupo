@@ -4,71 +4,84 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 const Carrossel: React.FC = () => {
-    
-    const [mostrar, setMostrar] = useState(false);
+
+    const [mostrar, setMostrar] = useState(true);
+    const [pausa, setPausa] = useState(false);
     const [posicoes, setPosicoes] = useState([1, 2, 3, 4]);
     const [atual, setAtual] = useState(1);
-
+    
     const Avancar = () => {
         let p = posicoes;
         p.push(p.shift());
         setPosicoes(p);
-        setAtual(posicoes[2]);
-        setMostrar(true);
-        return atual;
-    }
+        setMostrar(false);
+        setTimeout(() => {
+            setAtual(posicoes[2]);
+            setMostrar(true);
+        }, 500);
+        return false;        
+    };
 
-    const Retroceder = () => {
+    function Retroceder() {
         let p = posicoes;
         let b = p.pop();
         p.unshift(b);
         setPosicoes(p);
-        setAtual(posicoes[2]);
-        return atual;
+        setMostrar(false);
+        setTimeout(() => {
+            setAtual(posicoes[2]);
+            setMostrar(true);
+        }, 500);
     }
 
     useEffect(() => {
+        console.log(" useEffect pause=", { pausa });
         const interval = setInterval(() => {
-            Avancar();
-        }, 6000);        
-        setMostrar(false);
+            console.log(" interval pause ", { pausa });
+            if (Avancar) {
+                console.log(" afffe ");
+                Avancar();
+            };
+        }, 8000);
         return () => clearInterval(interval);
     }, []);
 
+    function paraTio() {
+        setPausa(true);
+        console.log("para tio", { pausa });
+    }
+
     return (
-        <Flex gridArea="carrossel" w="max">
-
-            <HStack spacing="25px" d="flex" color="preto.200" >
-
-                <Box >
-                    <IconButton  h="300px" onClick={Avancar}  
-                        colorScheme="gray"
-                        aria-label="Call Segun"
-                        size="lg"
-                        icon={<ArrowLeftIcon />}
-                    />
-                </Box>
-
-                <Box h="100%" >
-                    <ScaleFade initialScale={0.9} in={mostrar}>
-                        <Image h="100%" w="100%" src={atual + ".jpg"} />
-                    </ScaleFade>
-                </Box>
-
-                <Box >
-                    <IconButton h="300px" onClick={Retroceder}
-                        colorScheme="gray"
-                        aria-label="Call Segun"
-                        size="lg"
-                        icon={<ArrowRightIcon />}
-                    />
-
-                </Box>
-            </HStack>
-
+        <Flex gridArea="carrossel" w="100%" onClick={paraTio}>
+            <Box>
+                <HStack spacing="25px" d="flex" color="preto.200"
+                    onMouseEnter={() => setPausa(true)}
+                    onMouseLeave={() => setPausa(false)}
+                >
+                    <Box >
+                        <IconButton h="300px" onClick={Avancar}
+                            colorScheme="gray"
+                            aria-label="Call Segun"
+                            size="lg"
+                            icon={<ArrowLeftIcon />}
+                        />
+                    </Box>
+                    <Box h="100%" >
+                        <ScaleFade initialScale={0.9} in={mostrar}>
+                            <Image h="100%" w="100%" src={atual + ".jpg"} />
+                        </ScaleFade>
+                    </Box>
+                    <Box >
+                        <IconButton h="300px" onClick={Retroceder}
+                            colorScheme="gray"
+                            aria-label="Call Segun"
+                            size="lg"
+                            icon={<ArrowRightIcon />}
+                        />
+                    </Box>
+                </HStack>
+            </Box>
         </Flex>
     )
-
 }
-
 export default Carrossel
