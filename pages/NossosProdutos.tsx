@@ -29,7 +29,7 @@ export default function NossosProdutos() {
             {/* Cabeçalho */}
             <Cabecalho></Cabecalho>
             <Menu ></Menu>
-            <Titulo titulo="PRODUTOS"></Titulo>
+            <Titulo title="PRODUTOS"></Titulo>
             <Flex gridArea="principal"   >
                 <Box flexDir="column" >
                     <VStack spacing="25px" color="black">

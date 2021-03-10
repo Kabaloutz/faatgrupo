@@ -28,7 +28,7 @@ export default function Contatos() {
             {/* Cabeçalho */}
             <Cabecalho></Cabecalho>
             <Menu ></Menu>
-            <Titulo titulo="CONTATOS"></Titulo>
+            <Titulo title="CONTATOS"></Titulo>
             <Flex gridArea="principal"   >
                 <Box flexDir="column" >
                     <VStack spacing="25px" color="black">
