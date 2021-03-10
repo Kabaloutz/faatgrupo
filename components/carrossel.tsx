@@ -30,9 +30,9 @@ const Carrossel: React.FC = () => {
     }, []);
 
     return (
-        <Flex gridArea="carrossel">
+        <Flex gridArea="carrossel" >
 
-            <HStack spacing="25px"  d="flex"  color="gray.600">
+            <HStack spacing="25px"  d="flex"  color="gray.600" >
 
                 <Box >
                     <IconButton  h="300px" onClick={Avancar}
