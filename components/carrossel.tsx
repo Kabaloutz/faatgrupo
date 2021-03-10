@@ -1,7 +1,7 @@
 import { Box, Container, Flex, HStack, Text, Image, Heading, IconButton, Icon, Circle } from '@chakra-ui/react';
 import { PhoneIcon, ArrowRightIcon, ArrowLeftIcon } from '@chakra-ui/icons'
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Carrossel: React.FC = () => {
     const [posicoes, setPosicoes] = useState([1,2,3,4]);
@@ -10,8 +10,7 @@ const Carrossel: React.FC = () => {
         let p= posicoes;
         p.push(p.shift());
         setPosicoes(p);
-        setAtual(posicoes[2]);        
-        loadData();
+        setAtual(posicoes[2]); 
         return atual;
     }
     const Retroceder = () => {
@@ -20,30 +19,16 @@ const Carrossel: React.FC = () => {
         p.unshift(b);   
         setPosicoes(p);
         setAtual(posicoes[2]);
-        loadData();
         return atual;
     }
 
-    function timeout(ms) {
-        return new Promise((resolve) => setTimeout(resolve, ms));
-      }
-    
-      async function request() {
-        await timeout(5000);
+    useEffect(() => {
+      const interval = setInterval(() => {
         Avancar();
-        loadData();
-        return atual;
-      }
-      React.useEffect(() => {
-        async function loadData() {
-          const response = await request();
-        }
-    
-        loadData();
-      }, []);
-      async function loadData(){
-          return atual;
-      }
+      }, 6000);
+      return () => clearInterval(interval);
+    }, []);
+
     return (
         <Flex gridArea="carrossel">
 
