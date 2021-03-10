@@ -21,7 +21,7 @@ const Menu: React.FC = () => {
                 <Spacer/>
                 <Image src="/traco.png" />
                 <Spacer/>
-                <Box ><Link href="/">CONTATOS</Link></Box>
+                <Box ><Link href="/contatos">CONTATOS</Link></Box>
                 <Spacer/>
             </Flex>
     )

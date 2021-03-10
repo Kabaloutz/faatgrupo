@@ -2,7 +2,6 @@ import {
     Heading, Grid, GridItem, Flex, Spacer, Box, Button, Link, VStack,
     
 } from "@chakra-ui/react"
-import theme from '../styles/theme';
 import Produtos from "../components/produtos";
 import Titulo from "../components/barraTitulos";
 import Menu from "../components/menu";
@@ -10,7 +9,7 @@ import Cabecalho from "../components/cabecalho";
 import BarraBannersProdutos from "../components/barraBannersProdutos";
 import Rodape from "../components/rodape";
 
-export default function NossosProdutos() {
+export default function Contatos() {
     return (
         <Grid
             height="100vh"
@@ -29,7 +28,7 @@ export default function NossosProdutos() {
             {/* Cabeçalho */}
             <Cabecalho></Cabecalho>
             <Menu ></Menu>
-            <Titulo titulo="PRODUTOS"></Titulo>
+            <Titulo titulo="CONTATOS"></Titulo>
             <Flex gridArea="principal"   >
                 <Box flexDir="column" >
                     <VStack spacing="25px" color="black">
