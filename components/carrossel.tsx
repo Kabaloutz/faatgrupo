@@ -31,7 +31,7 @@ const Carrossel: React.FC = () => {
 
 
 
-    function newFunction(interval: NodeJS.Timeout): void | { [UNDEFINED_VOID_ONLY]: never; } {
+    function newFunction(interval: NodeJS.Timeout): void  {
         return clearInterval(interval);
     }
 
@@ -39,7 +39,7 @@ const Carrossel: React.FC = () => {
     return (
         <Flex gridArea="carrossel" >
 
-            <HStack spacing="25px" d="flex" color="gray.600" >
+            <HStack spacing="25px" d="flex" color="preto.200" >
 
                 <Box >
                     <IconButton onMouseMove={newFunction} h="300px" onClick={Avancar}

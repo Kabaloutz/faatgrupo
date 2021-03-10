@@ -1,13 +1,15 @@
-import { Box, Container, Flex, HStack, Text, Image,  Link, Heading } from '@chakra-ui/react';
+import { Box, Container, Flex, HStack, Text, Image,  Link, Heading, Spacer } from '@chakra-ui/react';
 import React from 'react';
 
 const Cabecalho: React.FC = () => {
    
     return (
-        <Flex gridArea="cabecalho" flexDir="row">
-            <Box p="20"><img src="/faatlogo.png" alt="logo do grupo faat" /> </Box>
-            <Box p="20"><img src="/slogan.png" alt="Nosso Slogan: A escolha certa para sua obra" /></Box>
-            <Box p="10"><img src="/mascote.png" alt="Tijolito mascote do grupo" /></Box>
+        <Flex gridArea="cabecalho" flexDir="row" align="center">
+            <Box><Image h="150px" src="/faatlogo.png"  alt="logo do grupo faat" /> </Box>
+            <Spacer />
+            <Box ><img src="/slogan.png" alt="Nosso Slogan: A escolha certa para sua obra" /></Box>
+            <Spacer />
+            <Box ><img src="/mascote.png" alt="Tijolito mascote do grupo" /></Box>
         </Flex>
     )
 

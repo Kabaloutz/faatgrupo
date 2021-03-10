@@ -2,13 +2,12 @@ import {
     Heading, Grid, GridItem, Flex, Spacer, Box, Button, Link,
     Fade, ScaleFade, Slide, SlideFade,
 } from "@chakra-ui/react"
-import theme from '../styles/theme';
 import Titulo from "../components/barraTitulos";
 import Menu from "../components/menu";
 import Cabecalho from "../components/cabecalho";
 import BarraBanners from "../components/barraBanners";
 import Carrossel from "../components/carrossel";
-import Quadros from "../components/quadros";
+import Painel from "../components/painel";
 import QuadroTexto from "../components/quadroTexto";
 import Rodape from "../components/rodape";
 import BannerHor from "../components/bannerHorizontal";
@@ -20,17 +19,18 @@ export default function Home() {
         <Grid
             height="100vh"
             templateColumns="1fr 1080px 1fr"
-            templateRows="200px 50px 40px 300px 50px 300px 50px 60px 1fr 90px"
+            templateRows="200px 50px 40px 300px 50px 300px 50px 60px 1fr 20px 90px"
             templateAreas="
                 '. cabecalho .'
                 '. menu .' 
                 '. . .'         
                 '. carrossel .' 
                 '. . .'  
-                '. quadros .' 
+                '. Painel .' 
                 '. . esquerda' 
                 '. titulo .'     
-                '. principal .'   
+                '. principal .'
+                '. . .'     
                 '. rodape .'         
                 "
         >
@@ -39,7 +39,7 @@ export default function Home() {
             <Cabecalho></Cabecalho>
             <Menu></Menu>
             <Carrossel ></Carrossel>
-            <Quadros></Quadros>
+            <Painel></Painel>
             <Titulo titulo="CONTRUINDO SONHOS"></Titulo>
             <Flex gridArea="principal" >
                 <Box >

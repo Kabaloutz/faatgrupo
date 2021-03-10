@@ -4,7 +4,7 @@ import React from 'react';
 const BannerHor: React.FC = () => {
     
     return (
-        <HStack mt="30" borderColor="gray.600" border="5px" bg="white"  justifyContent="center" shadow="xl" color="black" flexDir="row" h="110px">
+        <HStack mt="30"  bg="white"  justifyContent="center" shadow="xl" color="preto.200" flexDir="row" h="110px">
             <Text></Text>
         </HStack>
     )

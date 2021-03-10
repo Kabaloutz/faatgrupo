@@ -4,10 +4,9 @@ import React from 'react';
 const Quadro: React.FC = () => {
 
     return (
-        <Box w="200px" h="300px" borderColor="gray.600" border="5px" bg="white" align="center"  shadow="xl" color="gray.600" >
-            <Image src="/t_001.jpg" p='2' ></Image>
-            <Heading size="md" >"HISTÓRIA"</Heading>
-            <br></br>
+        <Box w="200px" h="300px" bg="white" align="center"  shadow="xl" color="preto.100" >
+            <Image m="2" src="/t_001.jpg"  ></Image>
+            <Heading m="2" size="md" >"HISTÓRIA"</Heading>
             <Text>
                 "Conheça mais sobre a história da Cerâmica Primavera."
             </Text>

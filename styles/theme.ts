@@ -3,19 +3,21 @@ import { extendTheme } from "@chakra-ui/react"
 // 2. Call `extendTheme` and pass your custom values
 const theme = extendTheme({
   colors: {
-    brand: {
+    principal: {
       100: "#f7fafc",
       // ...
       900: "#1a202c",
     },
-    yellow: {
-      700: "#61260D",
-      // ...
-      900: "#1a202c",
+    preto:{
+      100:"#2A2929",
+      200:"#282829",
     },
-    white: {
-      100: "#ffffff",
-    },
+    elementos: {
+      ar: "#00AFEF",
+      terra: "#5F8E49",
+      agua: "#3B708D",
+      fogo: "#ED3237",
+      },
   },
   styles: {
     global: {
@@ -23,7 +25,6 @@ const theme = extendTheme({
       body: {
         bg: "#9E9A98",
         color: "#fff",
-
       },
       // styles for the `a`
       a: {

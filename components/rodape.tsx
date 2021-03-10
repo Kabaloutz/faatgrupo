@@ -4,11 +4,10 @@ import React from 'react';
 const Rodape: React.FC = () => {
 
     return (
-        <Flex gridArea="rodape" flexDir="row" color="black" align="center" justifyContent="center">
-            <img src="/faatlogo.png" alt="logo do grupo faat" /> 
+        <Flex gridArea="rodape" flexDir="row" color="preto.200" align="center" justifyContent="center">
+            <Image h="70px" src="/faatlogo.png" alt="logo do grupo faat" /> 
             <Box ml="150px">© 2012. Cerâmica Primavera. Todos os direitos reservados.</Box>
         </Flex>
     )
-
 }
 export default Rodape;
