@@ -14,7 +14,6 @@ const Produtos  = ({ title,imageUrl,imageAlt, qnt,calcQnt }: Props) => {
         title: title,
         qnt: qnt,
         calcQnt: calcQnt,
-
     }
     return (
         <HStack spacing="25px" color="black" w="100%" bg="white" alignItems="center" justifyItems="center">
