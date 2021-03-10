@@ -9,11 +9,11 @@ interface Props {
 }
 const Produtos  = ({ title,imageUrl,imageAlt, qnt,calcQnt }: Props) => {
     const property = {
-        imageUrl: "/laje_s1_1.jpg",
-        imageAlt: "Rear view of modern home with pool",
-        title: "Laje H-7",
-        qnt: "17,4 deitado",
-        calcQnt: "*No cálculo da quantidade por m², foi considerado 1,5 cm de massa entre os tijolos.",
+        imageUrl: imageUrl,
+        imageAlt: imageAlt,
+        title: title,
+        qnt: qnt,
+        calcQnt: calcQnt,
 
     }
     return (
