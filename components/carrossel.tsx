@@ -4,38 +4,45 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 const Carrossel: React.FC = () => {
-    const [posicoes, setPosicoes] = useState([1,2,3,4]);
+    const [posicoes, setPosicoes] = useState([1, 2, 3, 4]);
     const [atual, setAtual] = useState(1);
     const Avancar = () => {
-        let p= posicoes;
+        let p = posicoes;
         p.push(p.shift());
         setPosicoes(p);
-        setAtual(posicoes[2]); 
+        setAtual(posicoes[2]);
         return atual;
     }
     const Retroceder = () => {
-        let p= posicoes;
+        let p = posicoes;
         let b = p.pop();
-        p.unshift(b);   
+        p.unshift(b);
         setPosicoes(p);
         setAtual(posicoes[2]);
         return atual;
     }
 
     useEffect(() => {
-      const interval = setInterval(() => {
-        Avancar();
-      }, 6000);
-      return () => clearInterval(interval);
+        const interval = setInterval(() => {
+            Avancar();
+        }, 6000);
+        return () => clearInterval(interval);
     }, []);
+
+
+
+    function newFunction(interval: NodeJS.Timeout): void | { [UNDEFINED_VOID_ONLY]: never; } {
+        return clearInterval(interval);
+    }
+
 
     return (
         <Flex gridArea="carrossel" >
 
-            <HStack spacing="25px"  d="flex"  color="gray.600" >
+            <HStack spacing="25px" d="flex" color="gray.600" >
 
                 <Box >
-                    <IconButton  h="300px" onClick={Avancar}
+                    <IconButton onMouseMove={newFunction} h="300px" onClick={Avancar}
                         colorScheme="gray"
                         aria-label="Call Segun"
                         size="lg"
@@ -43,18 +50,18 @@ const Carrossel: React.FC = () => {
                     />
                 </Box>
 
-                <Box  h="100%">
-                    <Image h="100%" w="100%" src={atual+".jpg"} />
+                <Box h="100%" >
+                    <Image h="100%" w="100%" src={atual + ".jpg"} />
                 </Box>
 
                 <Box >
-                    <IconButton  h="300px" onClick={Retroceder}
+                    <IconButton h="300px" onClick={Retroceder}
                         colorScheme="gray"
                         aria-label="Call Segun"
                         size="lg"
                         icon={<ArrowRightIcon />}
                     />
-                    
+
                 </Box>
             </HStack>
 
