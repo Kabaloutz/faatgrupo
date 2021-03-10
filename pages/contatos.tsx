@@ -1,6 +1,6 @@
 import {
     Heading, Grid, GridItem, Flex, Spacer, Box, Button, Link, VStack,
-    
+
 } from "@chakra-ui/react"
 import Produtos from "../components/produtos";
 import Titulo from "../components/barraTitulos";
@@ -32,15 +32,16 @@ export default function Contatos() {
             <Flex gridArea="principal"   >
                 <Box flexDir="column" >
                     <VStack spacing="25px" color="black">
-                        <Produtos  ></Produtos>
-                        <Produtos  ></Produtos>
-                        <Produtos  ></Produtos>
+                        <Produtos title="Laje H-7" imageUrl="/laje_s1_1.jpg" imageAlt="Rear view of modern home with pool" qnt="17,4 deitado" calcQnt="*No cálculo da quantidade por m², foi considerado 1,5 cm de massa entre os tijolos." ></Produtos>
+                        <Produtos title="Laje H-7" imageUrl="/laje_s1_1.jpg" imageAlt="Rear view of modern home with pool" qnt="17,4 deitado" calcQnt="*No cálculo da quantidade por m², foi considerado 1,5 cm de massa entre os tijolos." ></Produtos>
+                        <Produtos title="Laje H-7" imageUrl="/laje_s1_1.jpg" imageAlt="Rear view of modern home with pool" qnt="17,4 deitado" calcQnt="*No cálculo da quantidade por m², foi considerado 1,5 cm de massa entre os tijolos." ></Produtos>
+
                     </VStack>
                 </Box>
-            <BarraBannersProdutos></BarraBannersProdutos>
+                <BarraBannersProdutos></BarraBannersProdutos>
             </Flex>
             <Rodape />
-            
+
             <Flex></Flex>
         </Grid>
 
