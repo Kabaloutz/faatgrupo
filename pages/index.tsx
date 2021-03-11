@@ -11,11 +11,14 @@ import Painel from "../components/painel";
 import QuadroTexto from "../components/quadroTexto";
 import Rodape from "../components/rodape";
 import BannerHor from "../components/bannerHorizontal";
+import {motion} from "framer-motion";
+
 
 
 export default function Home() {
 
     return (
+
         <Grid
             height="100vh"
             templateColumns="1fr 1080px 1fr"
