@@ -52,14 +52,15 @@ const Carrossel: React.FC = () => {
     }
 
     return (
-        <Flex gridArea="carrossel" w="100%" onClick={paraTio}>
+
+        <Flex bg="black"  onClick={paraTio} align="center" justify="center">
             <Box>
-                <HStack spacing="25px" d="flex" color="preto.200"
+                <HStack spacing="25px"  color="preto.200"
                     onMouseEnter={() => setPausa(true)}
                     onMouseLeave={() => setPausa(false)}
                 >
                     <Box >
-                        <IconButton h="300px" onClick={Avancar}
+                        <IconButton minH="300px" onClick={Avancar}
                             colorScheme="gray"
                             aria-label="Call Segun"
                             size="lg"

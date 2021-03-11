@@ -8,27 +8,21 @@ interface Props {
     calcQnt: string;
 }
 const Produtos  = ({ title,imageUrl,imageAlt, qnt,calcQnt }: Props) => {
-    const property = {
-        imageUrl: imageUrl,
-        imageAlt: imageAlt,
-        title: title,
-        qnt: qnt,
-        calcQnt: calcQnt,
-    }
+   
     return (
         <HStack spacing="25px" color="black" w="100%" bg="white" alignItems="center" justifyItems="center">
             <Box p='5'>
-                <Image src={property.imageUrl} alt={property.imageAlt} />
+                <Image src={imageUrl} alt={imageAlt} />
             </Box>
             <Box>
                 <br></br>
-                <Heading size="md" alignItems="center" justifyItems="center" >{property.title}</Heading>
+                <Heading size="md" alignItems="center" justifyItems="center" >{title}</Heading>
                 <br></br>
                 <b>Quantidade por m²</b>
                 <br></br>
-                {property.qnt}
+                {qnt}
                 <br></br><br></br>
-                <Box fontStyle="italic">{property.calcQnt}</Box>
+                <Box fontStyle="italic">{calcQnt}</Box>
                 <br></br>
             </Box>
         </HStack>
