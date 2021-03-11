@@ -12,98 +12,98 @@ import { Head } from "next/document";
 import { motion } from "framer-motion";
 import React from "react";
 import GlobalStyles from '../styles/Global'
-import { Main } from '../styles'
+import { Main, Sticky, Section } from '../styles'
+import Carrossel from "../components/carrossel";
+import Painel from "../components/painel";
+import BannerHor from "../components/bannerHorizontal";
+import BarraBanners from "../components/barraBanners";
+import QuadroTexto from "../components/quadroTexto";
 
-{/* comentario */}
+{/* comentario */ }
 export default function Designsystem() {
     return (
-        <Grid
-            height="100vh"
-            templateColumns="1fr 1fr 1fr"
-            templateRows="1fr"
-            templateAreas=" '. principal .'  "
-        >
-            <Flex gridArea="principal" >
+    <Grid>
+        <>
+        <GlobalStyles />
+        <Main >
+            <Section style={{ height: "85%" }}>
+                <Grid
+                    height="100vh"
+                    templateColumns="1fr 1080px 1fr"
+                    templateRows="200px 50px 40px 300px 50px 300px 50px 60px 1fr 20px 90px"
+                    templateAreas="
+                    '. cabecalho .'
+                    '. menu .' 
+                    '. . .'         
+                    '. carrossel .' 
+                    '. . .'  
+                    '. Painel .' 
+                    '. . esquerda' 
+                    '. titulo .'     
+                    '. principal .'
+                    '. . .'     
+                    '. rodape .'         
+                    "
+                >
+                    <Flex gridArea="direita"></Flex>
+                    {/* Cabeçalho */}
+                    <Cabecalho></Cabecalho>
+                    <Menu></Menu>
+                    <Carrossel ></Carrossel>
+                    <Painel></Painel>
+                    <Titulo title="CONTRUINDO SONHOS"></Titulo>
+                    <Flex gridArea="principal" >
+                        <Box >
+                            <QuadroTexto />
+                            <BannerHor ></BannerHor>
+                        </Box>
+                        <BarraBanners ></BarraBanners>
 
-                <>
-                    <GlobalStyles />
-                    <Main style={{ height: '1610vh' }}>
-                        <section style={{ height: "72.7%" }}>
+                    </Flex>
+                    <Rodape />
+                </Grid>
+            </Section>
 
-                            <Grid
-                                height="100vh"
-                                templateColumns="1fr 1080px 1fr"
-                                templateRows="200px 50px 20px 60px 1fr 90px"
-                                templateAreas="
-'. cabecalho .'
-'. menu .' 
-'. . .'          
-    '. titulo .'     
-    '. principal2 .'   
-    '. rodape .'         
-    "
-                            >
-                                <Flex></Flex>
-                                <Cabecalho></Cabecalho>
-                                <Menu ></Menu>
-                                <Titulo title="CONTATOS"></Titulo>
-                                <Flex gridArea="principal2" >
-                                    <Box flexDir="column" >
-                                        <VStack spacing="25px" color="black">
-                                            <Produtos title="Laje H-7" imageUrl="/laje_s1_1.jpg" imageAlt="Rear view of modern home with pool" qnt="17,4 deitado" calcQnt="*No cálculo da quantidade por m², foi considerado 1,5 cm de massa entre os tijolos." ></Produtos>
-                                            <Produtos title="Laje H-7" imageUrl="/laje_s1_1.jpg" imageAlt="Rear view of modern home with pool" qnt="17,4 deitado" calcQnt="*No cálculo da quantidade por m², foi considerado 1,5 cm de massa entre os tijolos." ></Produtos>
-                                            <Produtos title="Laje H-7" imageUrl="/laje_s1_1.jpg" imageAlt="Rear view of modern home with pool" qnt="17,4 deitado" calcQnt="*No cálculo da quantidade por m², foi considerado 1,5 cm de massa entre os tijolos." ></Produtos>
+            <Section style={{ height: "50%" }}>
+                <Sticky>
 
-                                        </VStack>
-                                    </Box>
-                                    <BarraBannersProdutos></BarraBannersProdutos>
-                                </Flex>
-                                <Rodape />
+                </Sticky>
+                <Grid
+                    height="100vh"
+                    templateColumns="1fr 1080px 1fr"
+                    templateRows="200px 50px 20px 60px 1fr 90px"
+                    templateAreas="
+                                '. cabecalho .'
+                                '. menu .' 
+                                '. . .'          
+                                    '. titulo .'     
+                                    '. principal2 .'   
+                                    '. rodape .'         
+                                    "
+                >
+                    <Flex></Flex>
+                    <Cabecalho></Cabecalho>
+                    <Menu ></Menu>
+                    <Titulo title="CONTATOS"></Titulo>
+                    <Flex gridArea="principal2" >
+                        <Box flexDir="column" >
+                            <VStack spacing="25px" color="black">
+                                <Produtos title="Laje H-7" imageUrl="/laje_s1_1.jpg" imageAlt="Rear view of modern home with pool" qnt="17,4 deitado" calcQnt="*No cálculo da quantidade por m², foi considerado 1,5 cm de massa entre os tijolos." ></Produtos>
+                                <Produtos title="Laje H-7" imageUrl="/laje_s1_1.jpg" imageAlt="Rear view of modern home with pool" qnt="17,4 deitado" calcQnt="*No cálculo da quantidade por m², foi considerado 1,5 cm de massa entre os tijolos." ></Produtos>
+                                <Produtos title="Laje H-7" imageUrl="/laje_s1_1.jpg" imageAlt="Rear view of modern home with pool" qnt="17,4 deitado" calcQnt="*No cálculo da quantidade por m², foi considerado 1,5 cm de massa entre os tijolos." ></Produtos>
 
-                                <Flex></Flex>
-                            </Grid>
-                        </section>
-                        <section style={{ height:"27,3%"}}>
+                            </VStack>
+                        </Box>
+                        <BarraBannersProdutos></BarraBannersProdutos>
+                    </Flex>
+                    <Rodape />
 
-<Grid
-height="100vh"
-templateColumns="1fr 1080px 1fr"
-templateRows="200px 50px 20px 60px 1fr 90px"
-templateAreas="
-'. cabecalho .'
-'. menu .' 
-'. . .'          
-    '. titulo .'     
-    '. principal .'   
-    '. rodape .'         
-    "
->
-<Flex></Flex>
-<Cabecalho></Cabecalho>
-<Menu ></Menu>
-<Titulo title="CONTATOS"></Titulo>
-<Flex gridArea="principal"   >
-    <Box flexDir="column" >
-        <VStack spacing="25px" color="black">
-            <Produtos title="Laje H-7" imageUrl="/laje_s1_1.jpg" imageAlt="Rear view of modern home with pool" qnt="17,4 deitado" calcQnt="*No cálculo da quantidade por m², foi considerado 1,5 cm de massa entre os tijolos." ></Produtos>
-            <Produtos title="Laje H-7" imageUrl="/laje_s1_1.jpg" imageAlt="Rear view of modern home with pool" qnt="17,4 deitado" calcQnt="*No cálculo da quantidade por m², foi considerado 1,5 cm de massa entre os tijolos." ></Produtos>
-            <Produtos title="Laje H-7" imageUrl="/laje_s1_1.jpg" imageAlt="Rear view of modern home with pool" qnt="17,4 deitado" calcQnt="*No cálculo da quantidade por m², foi considerado 1,5 cm de massa entre os tijolos." ></Produtos>
-
-        </VStack>
-    </Box>
-    <BarraBannersProdutos></BarraBannersProdutos>
-</Flex>
-<Rodape />
-
-<Flex></Flex>
-</Grid>
-</section>
-
-  </Main>
-                </>
-            </Flex>
+                    <Flex></Flex>
+                </Grid>
+            </Section>
+        </Main>
+            </>
         </Grid>
-
     )
 }
 
