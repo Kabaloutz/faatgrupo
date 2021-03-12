@@ -2,8 +2,7 @@ import { Box, Container, Flex, HStack, Text, Image, Heading, IconButton, Fade, S
 import { ArrowRightIcon, ArrowLeftIcon } from '@chakra-ui/icons'
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { useTransform, useViewportScroll, motion, useAnimation } from 'framer-motion';
-import { Sticky } from '../styles';
+import { useTransform, useViewportScroll, motion } from 'framer-motion';
 
 
 const Carrossel: React.FC = () => {
@@ -58,34 +57,40 @@ const Carrossel: React.FC = () => {
     const boxVariants = {
         hidden: { scale: 0 },
         visible: {
-          scale: 1,
-          transition: {
-            duration: 0.5
-          }
+            scale: 1,
+            transition: {
+                duration: 0.5
+            }
         }
-      }
+    }
 
     return (
-        <Sticky className="carAnimado">
+        <Box >
             <motion.div  >
                 <Box layerStyle="container" initial="hidden" animate="visible" variants={boxVariants}>
-                    <IconButton h="300px" onClick={Retroceder}
-                        colorScheme="gray"
-                        aria-label="Call Segun"
-                        size="lg"
-                        icon={<ArrowLeftIcon />}
-                    />
-                    <Image src={1 + ".jpg"} />
+                    <Box>
+                        <IconButton h="300px" onClick={Retroceder}
+                            colorScheme="gray"
+                            aria-label="Call Segun"
+                            size="lg"
+                            icon={<ArrowLeftIcon />}
+                        />
+                    </Box>
+                    <Box>
+                        <Image src={1 + ".jpg"} />
+                    </Box>
+                    <Box>
+                        <IconButton h="300px" onClick={Avancar}
+                            colorScheme="gray"
+                            aria-label="Call Segun"
+                            size="lg"
+                            icon={<ArrowRightIcon />}
+                        />
+                    </Box>
 
-                    <IconButton h="300px" onClick={Avancar}
-                        colorScheme="gray"
-                        aria-label="Call Segun"
-                        size="lg"
-                        icon={<ArrowRightIcon />}
-                    />
                 </Box>
             </motion.div>
-        </Sticky>
+        </Box>
     )
 }
 export default Carrossel

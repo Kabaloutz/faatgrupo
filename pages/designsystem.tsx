@@ -11,7 +11,6 @@ import Carrossel from "../components/carrossel";
 import Painel from "../components/painel";
 import BannerHor from "../components/bannerHorizontal";
 import BarraBanners from "../components/barraBanners";
-import { Section, Sticky } from "../styles";
 
 {/* comentario */ }
 export default function Designsystem() {
@@ -19,8 +18,8 @@ export default function Designsystem() {
         <>
             <GlobalStyles />            
             <Box h="100%" w="70%" marginStart="15%">
-                <Section >
-                    <Sticky>
+                <Box >
+                    <Box>
                         <Cabecalho></Cabecalho>
                         <Menu ></Menu>
                         <Carrossel></Carrossel>
@@ -35,8 +34,8 @@ export default function Designsystem() {
                         <BarraBanners></BarraBanners>
                         <BannerHor></BannerHor>
                         <Rodape />
-                    </Sticky>
-                </Section>
+                    </Box>
+                </Box>
             </Box>
         </>
     )

@@ -14,15 +14,13 @@ const theme = extendTheme({
       borderColor: "orange.500",
     },
     container: {
-      w:"100%",
       mt:"5",
       mb:"5",
       position: "relative",
-      display:"flex",
       justifyContent:"center",
       alignItems:"center",
       Image:{
-        h:"100%",
+        w:"10%",
       },
     },    
 

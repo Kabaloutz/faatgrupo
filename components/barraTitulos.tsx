@@ -1,7 +1,7 @@
 import { Box, Container, Flex, HStack, Text, Image, Link, Heading } from '@chakra-ui/react';
 import React from 'react';
 import { useTransform, useViewportScroll, motion } from 'framer-motion';
-import { Sticky } from '../styles';
+
 
 interface Props {
     title: string;
@@ -18,7 +18,7 @@ const Titulo = ({ title }: Props) => {
 
 
     return (
-        <Sticky className="tituloAnimado">
+        <Box >
             <motion.div style={{
                 position: 'absolute',
                 top: '0',
@@ -33,7 +33,7 @@ const Titulo = ({ title }: Props) => {
                     <Flex m='2' align="center"><Image p="2" src="/traco.png" /> <b>{title}</b> </Flex>
                 </Flex>
             </motion.div>
-        </Sticky>
+        </Box>
     )
 }
 export default Titulo;

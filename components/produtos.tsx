@@ -1,7 +1,6 @@
 import { Box, Container, Flex, HStack, Text, Image, space, Heading } from '@chakra-ui/react';
 import React from 'react';
 import { useTransform, useViewportScroll, motion } from 'framer-motion';
-import { Sticky } from '../styles';
 
 interface Props {
     title: string;
@@ -20,7 +19,7 @@ const Produtos  = ({ title,imageUrl,imageAlt, qnt,calcQnt }: Props) => {
 
 
     return (
-        <Sticky className="prodAnimado">
+        <Box>
             <motion.div style={{
             }}>
         <Flex spacing="25px" bg="white" alignItems="center" justifyItems="center">
@@ -40,7 +39,7 @@ const Produtos  = ({ title,imageUrl,imageAlt, qnt,calcQnt }: Props) => {
             </Box>
         </Flex>
             </motion.div>
-        </Sticky>
+        </Box>
     )
 }
 export default Produtos;

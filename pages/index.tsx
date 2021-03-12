@@ -1,3 +1,4 @@
+{/* Cabeçalho */}
 import {
     Heading, Grid, GridItem, Flex, Spacer, Box, Button, Link,
     Fade, ScaleFade, Slide, SlideFade,
@@ -13,8 +14,6 @@ import Rodape from "../components/rodape";
 import BannerHor from "../components/bannerHorizontal";
 import {motion} from "framer-motion";
 
-
-
 export default function Home() {
 
     return (
@@ -24,7 +23,7 @@ export default function Home() {
             templateColumns="1fr 1080px 1fr"
             templateRows="200px 50px 40px 300px 50px 300px 50px 60px 1fr 20px 90px"
             templateAreas="
-                '. cabecalho .'
+                '. Cabecalho .'
                 '. menu .' 
                 '. . .'         
                 '. carrossel .' 
@@ -37,22 +36,15 @@ export default function Home() {
                 '. rodape .'         
                 "
         >
-            <Flex gridArea="direita"></Flex>
-            {/* Cabeçalho */}
-            <Cabecalho></Cabecalho>
-            <Menu></Menu>
-            <Carrossel ></Carrossel>
-            <Painel></Painel>
-            <Titulo title="CONTRUINDO SONHOS"></Titulo>
-            <Flex gridArea="principal" >
-                <Box >
-                    <QuadroTexto />
-                    <BannerHor ></BannerHor>
-                </Box>
-                <BarraBanners ></BarraBanners>
-
-            </Flex>
-            <Rodape />
+           <Box gridArea="Cabecalho"><Cabecalho></Cabecalho></Box>
+           <Box gridArea="Cabecalho"><Menu></Menu></Box>
+           <Box gridArea="Cabecalho"><Carrossel ></Carrossel></Box>
+           <Box gridArea="Cabecalho"><Painel></Painel></Box>
+           <Box gridArea="Cabecalho"><Titulo title="CONTRUINDO SONHOS"></Titulo></Box>
+           <Box gridArea="Cabecalho"><QuadroTexto /></Box >
+           <Box gridArea="Cabecalho"><BannerHor ></BannerHor></Box>
+           <Box gridArea="Cabecalho"><BarraBanners ></BarraBanners></Box>
+           <Box gridArea="Cabecalho"><Rodape /></Box>
         </Grid>
 
     )

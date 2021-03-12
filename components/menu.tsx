@@ -1,7 +1,7 @@
 import { Box, Container, Flex, HStack, Text, Image, Spacer, Link, Heading, Icon } from '@chakra-ui/react';
 import React from 'react';
 import { useTransform, useViewportScroll, motion } from 'framer-motion';
-import { Sticky } from '../styles';
+
 
 
 const Menu: React.FC = () => {
@@ -14,7 +14,7 @@ const Menu: React.FC = () => {
 
 
     return (
-        <Sticky className="menuAnimado">
+        <Box >
             <motion.div style={{
             }}>
                 <Flex bg="elementos.agua" h="40px" mb="4" alignItems="center" justifyContent="center" flexDir="row" >
@@ -39,7 +39,7 @@ const Menu: React.FC = () => {
                     <Spacer />
                 </Flex>
             </motion.div>
-        </Sticky>
+        </Box>
     )
 }
 export default Menu;
