@@ -85,7 +85,7 @@ export default function Designsystem() {
                 '. rodape .'         
                 "
                     >
-                        <Cabecalho gridArea="cabecalho"></Cabecalho>
+                        <Cabecalho ></Cabecalho>
                         <Menu gridArea="menu"></Menu>
                         <CarrosselAnimado ></CarrosselAnimado>
                         <Painel></Painel>
