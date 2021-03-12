@@ -45,7 +45,7 @@ export default function Designsystem() {
                         <Cabecalho></Cabecalho>
                         <Menu ></Menu>
                         <Flex gridArea="carrossel" spacing="25px" color="black">
-                                <Carrossel ></Carrossel>
+                            <Carrossel ></Carrossel>
                         </Flex>
                         <Titulo title="CONTATOS"></Titulo>
                         <Flex gridArea="principal2" >
@@ -84,7 +84,9 @@ export default function Designsystem() {
                 "
                     >
                         <Cabecalho ></Cabecalho>
-                        <Menu gridArea="menu"></Menu>
+                        <Flex gridArea="menu">
+                            <Menu ></Menu>
+                        </Flex>
                         <CarrosselAnimado ></CarrosselAnimado>
                         <Painel></Painel>
                         <Titulo title="CONTRUINDO SONHOS"></Titulo>

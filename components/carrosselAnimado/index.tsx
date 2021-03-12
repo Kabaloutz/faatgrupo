@@ -1,4 +1,5 @@
-import { ReactNode } from 'react';
+
+
 import React from 'react';
 import { Sticky} from '../../styles';
 import { useTransform, useViewportScroll,motion } from 'framer-motion';
