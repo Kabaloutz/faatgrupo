@@ -57,22 +57,17 @@ const Carrossel: React.FC = () => {
     const { scrollYProgress } = useViewportScroll()
     const frameOpacity = useTransform(scrollYProgress, [0.20, 0.60], [1, 0]);
     const frameScale = useTransform(scrollYProgress, [0.20, 0.40], [1, 0.5]);
-    const frameH = useTransform(scrollYProgress, [0.155, 0.158], [1, 0]); 
-    const frameW = useTransform(scrollYProgress, [0.155, 0.158], [1, 0]); 
+    const frameH = useTransform(scrollYProgress, [0.155, 0.158], [1, 0]);
+    const frameW = useTransform(scrollYProgress, [0.155, 0.158], [1, 0]);
 
 
     return (
         <Sticky className="carAnimado">
             <motion.div style={{
                 position: 'absolute',
-                top: '0',
                 borderRadius: '4px',
                 scale: frameScale,
-                height: frameH,
-                width: frameW,
             }}>
-
-
                 <Flex bg="black" onClick={paraTio} align="center" justify="center">
                     <Box>
                         <HStack spacing="25px" color="preto.200"
