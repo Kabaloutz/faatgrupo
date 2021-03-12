@@ -11,20 +11,20 @@ import Carrossel from "../components/carrossel";
 import Painel from "../components/painel";
 import BannerHor from "../components/bannerHorizontal";
 import BarraBanners from "../components/barraBanners";
-import QuadroTexto from "../components/quadroTexto";
 import { Section, Sticky } from "../styles";
 
 {/* comentario */ }
 export default function Designsystem() {
     return (
         <>
-            <GlobalStyles />
-            <Box bg="blue" h="100%" w="70%" marginStart="15%"   >
+            <GlobalStyles />            
+            <Box h="100%" w="70%" marginStart="15%">
                 <Section >
                     <Sticky>
                         <Cabecalho></Cabecalho>
                         <Menu ></Menu>
-                        <Carrossel ></Carrossel>
+                        <Carrossel></Carrossel>
+                        <Painel></Painel>
                         <Titulo title="CONTATOS"></Titulo>
                         <VStack spacing="25px" color="black">
                             <Produtos title="Laje H-7" imageUrl="/laje_s1_1.jpg" imageAlt="Rear view of modern home with pool" qnt="17,4 deitado" calcQnt="*No cálculo da quantidade por m², foi considerado 1,5 cm de massa entre os tijolos." ></Produtos>
@@ -32,10 +32,11 @@ export default function Designsystem() {
                             <Produtos title="Laje H-7" imageUrl="/laje_s1_1.jpg" imageAlt="Rear view of modern home with pool" qnt="17,4 deitado" calcQnt="*No cálculo da quantidade por m², foi considerado 1,5 cm de massa entre os tijolos." ></Produtos>
                         </VStack>
                         <BarraBannersProdutos></BarraBannersProdutos>
+                        <BarraBanners></BarraBanners>
+                        <BannerHor></BannerHor>
                         <Rodape />
                     </Sticky>
                 </Section>
-
             </Box>
         </>
     )

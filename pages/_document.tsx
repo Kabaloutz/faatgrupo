@@ -11,6 +11,7 @@ class MyDocument extends Document<DocumentProps> {
                     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js" />
                     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" rel="stylesheet" />
                     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" rel="stylesheet" />
+                    <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css" />
                 </Head>
                 <body>
                     <Main />

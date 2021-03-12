@@ -17,8 +17,8 @@ export const Main =styled.main`
     }
 }
 .carAnimado{
+  display:none;
     background: red;
-    display: flex;
     align-items: start;
 }
 .EMPRESA
@@ -39,8 +39,73 @@ export const Main =styled.main`
 }   
 .tela 
 {
-    background: "green";
-} 
+    width: 100vw;
+    height: 100vh;
+    background: #151515;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    
+
+.example-container {
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .next,
+  .prev {
+    top: calc(50% - 20px);
+    position: absolute;
+    background: red;
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 2;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .prev {
+    left: 10px;
+    transform: scale(-1);
+  }
+  
+  img {
+    position: absolute;
+    max-width: 100vw;
+  }
+  
+  .refresh {
+    padding: 10px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
 `;
 export const Section =styled.div``;
 export const Sticky =styled(motion.div)`

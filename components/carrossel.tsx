@@ -1,9 +1,10 @@
-import { Box, Container, Flex, HStack, Text, Image, Heading, IconButton, Fade, ScaleFade, Slide, SlideFade, useDisclosure } from '@chakra-ui/react';
+import { Box, Container, Flex, HStack, Text, Image, Heading, IconButton, Fade, ScaleFade, Slide, SlideFade, useDisclosure, SimpleGrid } from '@chakra-ui/react';
 import { ArrowRightIcon, ArrowLeftIcon } from '@chakra-ui/icons'
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { useTransform, useViewportScroll, motion } from 'framer-motion';
+import { useTransform, useViewportScroll, motion, useAnimation } from 'framer-motion';
 import { Sticky } from '../styles';
+
 
 const Carrossel: React.FC = () => {
 
@@ -37,13 +38,8 @@ const Carrossel: React.FC = () => {
     }
 
     useEffect(() => {
-        console.log(" useEffect pause=", { pausa });
         const interval = setInterval(() => {
-            console.log(" interval pause ", { pausa });
-            if (Avancar) {
-                console.log(" afffe ");
-                Avancar();
-            };
+            Avancar();
         }, 8000);
         return () => clearInterval(interval);
     }, []);
@@ -54,43 +50,40 @@ const Carrossel: React.FC = () => {
     }
 
 
-    const { scrollYProgress } = useViewportScroll()
+    const { scrollYProgress } = useViewportScroll();
     const frameOpacity = useTransform(scrollYProgress, [0.20, 0.60], [1, 0]);
     const frameScale = useTransform(scrollYProgress, [0.20, 0.40], [1, 0.5]);
     const frameH = useTransform(scrollYProgress, [0.155, 0.158], [1, 0]);
     const frameW = useTransform(scrollYProgress, [0.155, 0.158], [1, 0]);
-
+    const boxVariants = {
+        hidden: { scale: 0 },
+        visible: {
+          scale: 1,
+          transition: {
+            duration: 0.5
+          }
+        }
+      }
 
     return (
         <Sticky className="carAnimado">
-            <motion.div style={{
-            }}>
-                <Flex bg="black" onClick={paraTio} align="center" justify="center" bgImage={atual + ".jpg"}>
-                    <Box>
-                        <HStack spacing="25px" color="preto.200"
-                            onMouseEnter={() => setPausa(true)}
-                            onMouseLeave={() => setPausa(false)}
-                        >
-                            <Box >
-                                <IconButton minH="300px" onClick={Avancar}
-                                    colorScheme="gray"
-                                    aria-label="Call Segun"
-                                    size="lg"
-                                    icon={<ArrowLeftIcon />}
-                                />
-                            </Box>
-                                <Image h="100%" w="100%" src={atual + ".jpg"} />
-                            <Box >
-                                <IconButton h="300px" onClick={Retroceder}
-                                    colorScheme="gray"
-                                    aria-label="Call Segun"
-                                    size="lg"
-                                    icon={<ArrowRightIcon />}
-                                />
-                            </Box>
-                        </HStack>
-                    </Box>
-                </Flex>
+            <motion.div  >
+                <Box layerStyle="container" initial="hidden" animate="visible" variants={boxVariants}>
+                    <IconButton h="300px" onClick={Retroceder}
+                        colorScheme="gray"
+                        aria-label="Call Segun"
+                        size="lg"
+                        icon={<ArrowLeftIcon />}
+                    />
+                    <Image src={1 + ".jpg"} />
+
+                    <IconButton h="300px" onClick={Avancar}
+                        colorScheme="gray"
+                        aria-label="Call Segun"
+                        size="lg"
+                        icon={<ArrowRightIcon />}
+                    />
+                </Box>
             </motion.div>
         </Sticky>
     )

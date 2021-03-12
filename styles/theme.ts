@@ -2,6 +2,32 @@
 import { extendTheme } from "@chakra-ui/react"
 // 2. Call `extendTheme` and pass your custom values
 const theme = extendTheme({
+  layerStyles: {
+    base: {
+      bg: "gray.50",
+      border: "2px solid",
+      borderColor: "gray.500",
+    },
+    selected: {
+      bg: "teal.500",
+      color: "teal.700",
+      borderColor: "orange.500",
+    },
+    container: {
+      w:"100%",
+      mt:"5",
+      mb:"5",
+      position: "relative",
+      display:"flex",
+      justifyContent:"center",
+      alignItems:"center",
+      Image:{
+        h:"100%",
+      },
+    },    
+
+  },
+  
   colors: {
     principal: {
       100: "#f7fafc",
@@ -20,7 +46,7 @@ const theme = extendTheme({
       },
   },
   styles: {
-    global: {
+    global: {          
       // styles for the `body`
       body: {
         bg: "#9E9A98",
@@ -32,8 +58,8 @@ const theme = extendTheme({
         _hover: {
           textDecoration: "underline",
         },      
-      }, 
-    },
-  },
+      },
+  }, 
+},
 })
 export default theme
