@@ -1,31 +1,25 @@
-import {
-    Heading, Grid, GridItem, Flex, Spacer, Box, Button, Link, VStack, Text
-
-} from "@chakra-ui/react"
+import { Grid, Flex, Box, VStack} from "@chakra-ui/react"
 import Produtos from "../components/produtos";
 import Titulo from "../components/barraTitulos";
 import Menu from "../components/menu";
 import Cabecalho from "../components/cabecalho";
 import BarraBannersProdutos from "../components/barraBannersProdutos";
 import Rodape from "../components/rodape";
-import { Head } from "next/document";
-import { motion } from "framer-motion";
 import React from "react";
 import GlobalStyles from '../styles/globals';
-import { Main, Sticky, Section } from '../styles';
 import Carrossel from "../components/carrossel";
 import Painel from "../components/painel";
 import BannerHor from "../components/bannerHorizontal";
 import BarraBanners from "../components/barraBanners";
 import QuadroTexto from "../components/quadroTexto";
-import CarrosselAnimado from '../components/carrosselAnimado'
+import { Section,Sticky } from "../styles";
 
 {/* comentario */ }
 export default function Designsystem() {
     return (
         <>
             <GlobalStyles />
-            <Section style={{ height: "50%" }}>
+            <Section style={{ height: "50%vh" }}>
                 <Sticky>
                     <Grid
                         height="100vh"
@@ -41,10 +35,12 @@ export default function Designsystem() {
                                     '. rodape .'         
                                     "
                     >
-                        <Flex></Flex>
+                        <Flex gridArea="cabecalho">
+                            
+                        </Flex>
                         <Cabecalho></Cabecalho>
                         <Menu ></Menu>
-                        <Flex gridArea="carrossel" spacing="25px" color="black">
+                        <Flex gridArea="carrossel"  color="black">
                             <Carrossel ></Carrossel>
                         </Flex>
                         <Titulo title="CONTATOS"></Titulo>
