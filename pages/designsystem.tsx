@@ -33,8 +33,7 @@ export default function Designsystem() {
                         templateRows="200px 50px 1fr 20px 60px 1fr 90px"
                         templateAreas="
                                 '. cabecalho .'
-                                '. menu .' 
-                                
+                                '. menu .'                                 
                                 '. carrossel .' 
                                 '. . .'          
                                     '. titulo .'     
@@ -45,10 +44,9 @@ export default function Designsystem() {
                         <Flex></Flex>
                         <Cabecalho></Cabecalho>
                         <Menu ></Menu>
-                        <VStack gridArea="carrossel" spacing="25px" color="black">
+                        <Flex gridArea="carrossel" spacing="25px" color="black">
                                 <Carrossel ></Carrossel>
-                        </VStack>
-                        <Carrossel ></Carrossel>
+                        </Flex>
                         <Titulo title="CONTATOS"></Titulo>
                         <Flex gridArea="principal2" >
                             <Box flexDir="column" >
