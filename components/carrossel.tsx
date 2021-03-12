@@ -64,7 +64,10 @@ const Carrossel: React.FC = () => {
     return (
         <Sticky   className="carAnimado">       
       <motion.div style={{
-        
+        margin:"1px",
+        position:'fixed',
+        bottom: '0',
+        right: '0',
         borderRadius: '4px',
         border: '4px solid #fff',
         scale:  frameScale,
