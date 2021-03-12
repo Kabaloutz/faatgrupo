@@ -18,17 +18,8 @@ export const Main =styled.main`
 }
 .carAnimado{
     background: red;
-    overflow: hidden;
-    .offset{}
-    .a{
-        background: #f5f1ea;        
-    }
-    .b{
-        background: #582534; 
-    }
-    .c{
-        background: #0a7397; 
-    }
+    display: flex;
+    align-items: start;
 }
 .EMPRESA
 {
@@ -46,9 +37,13 @@ export const Main =styled.main`
 {
     background: "#5F8E49";
 }   
+.tela 
+{
+    background: "green";
+} 
 `;
 export const Section =styled.div``;
-export const Sticky =styled.div`
+export const Sticky =styled(motion.div)`
     height: 100vh;
     position: sticky;
     top:0;

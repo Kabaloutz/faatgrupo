@@ -22,11 +22,8 @@ const Produtos  = ({ title,imageUrl,imageAlt, qnt,calcQnt }: Props) => {
     return (
         <Sticky className="prodAnimado">
             <motion.div style={{
-                position: 'absolute',
-                borderRadius: '4px',
-                scale: frameScale,
             }}>
-        <Flex spacing="25px" color="black" w="100%" bg="white" alignItems="center" justifyItems="center">
+        <Flex spacing="25px" bg="white" alignItems="center" justifyItems="center">
             <Box p='5'>
                 <Image src={imageUrl} alt={imageAlt} />
             </Box>

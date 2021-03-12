@@ -16,10 +16,8 @@ const Menu: React.FC = () => {
     return (
         <Sticky className="menuAnimado">
             <motion.div style={{
-                opacity: frameOpacity,
-                scale: frameScale,
             }}>
-                <Flex bg="elementos.agua" mb="4" alignItems="center" justifyContent="center" flexDir="row" >
+                <Flex bg="elementos.agua" h="40px" mb="4" alignItems="center" justifyContent="center" flexDir="row" >
                     <Spacer />
                     <Box ><Link href="/">HOME</Link></Box>
                     <Spacer />

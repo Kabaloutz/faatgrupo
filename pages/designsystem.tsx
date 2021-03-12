@@ -19,22 +19,24 @@ export default function Designsystem() {
     return (
         <>
             <GlobalStyles />
-            <Section >
-                <Sticky>
-                    <Cabecalho></Cabecalho>
-                    <Menu ></Menu>
-                    <Carrossel ></Carrossel>
-                    <Titulo title="CONTATOS"></Titulo>
-                    <VStack spacing="25px" color="black">
-                        <Produtos title="Laje H-7" imageUrl="/laje_s1_1.jpg" imageAlt="Rear view of modern home with pool" qnt="17,4 deitado" calcQnt="*No cálculo da quantidade por m², foi considerado 1,5 cm de massa entre os tijolos." ></Produtos>
-                        <Produtos title="Laje H-7" imageUrl="/laje_s1_1.jpg" imageAlt="Rear view of modern home with pool" qnt="17,4 deitado" calcQnt="*No cálculo da quantidade por m², foi considerado 1,5 cm de massa entre os tijolos." ></Produtos>
-                        <Produtos title="Laje H-7" imageUrl="/laje_s1_1.jpg" imageAlt="Rear view of modern home with pool" qnt="17,4 deitado" calcQnt="*No cálculo da quantidade por m², foi considerado 1,5 cm de massa entre os tijolos." ></Produtos>
-                    </VStack>
-                    <BarraBannersProdutos></BarraBannersProdutos> 
-                <Rodape />
-                </Sticky>
-        </Section>
+            <Box bg="blue" h="100%" w="70%" marginStart="15%"   >
+                <Section >
+                    <Sticky>
+                        <Cabecalho></Cabecalho>
+                        <Menu ></Menu>
+                        <Carrossel ></Carrossel>
+                        <Titulo title="CONTATOS"></Titulo>
+                        <VStack spacing="25px" color="black">
+                            <Produtos title="Laje H-7" imageUrl="/laje_s1_1.jpg" imageAlt="Rear view of modern home with pool" qnt="17,4 deitado" calcQnt="*No cálculo da quantidade por m², foi considerado 1,5 cm de massa entre os tijolos." ></Produtos>
+                            <Produtos title="Laje H-7" imageUrl="/laje_s1_1.jpg" imageAlt="Rear view of modern home with pool" qnt="17,4 deitado" calcQnt="*No cálculo da quantidade por m², foi considerado 1,5 cm de massa entre os tijolos." ></Produtos>
+                            <Produtos title="Laje H-7" imageUrl="/laje_s1_1.jpg" imageAlt="Rear view of modern home with pool" qnt="17,4 deitado" calcQnt="*No cálculo da quantidade por m², foi considerado 1,5 cm de massa entre os tijolos." ></Produtos>
+                        </VStack>
+                        <BarraBannersProdutos></BarraBannersProdutos>
+                        <Rodape />
+                    </Sticky>
+                </Section>
 
+            </Box>
         </>
     )
 }

@@ -64,11 +64,8 @@ const Carrossel: React.FC = () => {
     return (
         <Sticky className="carAnimado">
             <motion.div style={{
-                position: 'absolute',
-                borderRadius: '4px',
-                scale: frameScale,
             }}>
-                <Flex bg="black" onClick={paraTio} align="center" justify="center">
+                <Flex bg="black" onClick={paraTio} align="center" justify="center" bgImage={atual + ".jpg"}>
                     <Box>
                         <HStack spacing="25px" color="preto.200"
                             onMouseEnter={() => setPausa(true)}
@@ -82,11 +79,7 @@ const Carrossel: React.FC = () => {
                                     icon={<ArrowLeftIcon />}
                                 />
                             </Box>
-                            <Box h="100%" >
-                                <ScaleFade initialScale={0.9} in={mostrar}>
-                                    <Image h="100%" w="100%" src={atual + ".jpg"} />
-                                </ScaleFade>
-                            </Box>
+                                <Image h="100%" w="100%" src={atual + ".jpg"} />
                             <Box >
                                 <IconButton h="300px" onClick={Retroceder}
                                     colorScheme="gray"
