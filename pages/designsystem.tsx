@@ -83,11 +83,13 @@ export default function Designsystem() {
                 '. rodape .'         
                 "
                     >
-                        <Cabecalho ></Cabecalho>
+                        <Flex gridArea="cabecalho" >
+                            <Cabecalho ></Cabecalho>
+                        </Flex>
                         <Flex gridArea="menu">
                             <Menu ></Menu>
                         </Flex>
-                        <CarrosselAnimado ></CarrosselAnimado>
+                        <Carrossel ></Carrossel>
                         <Painel></Painel>
                         <Titulo title="CONTRUINDO SONHOS"></Titulo>
                         <Flex gridArea="principal" >
