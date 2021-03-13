@@ -6,7 +6,6 @@ import Cabecalho from "../components/cabecalho";
 import BarraBannersProdutos from "../components/barraBannersProdutos";
 import Rodape from "../components/rodape";
 import React from "react";
-import GlobalStyles from '../styles/globals';
 import Carrossel from "../components/carrossel";
 import Painel from "../components/painel";
 import BannerHor from "../components/bannerHorizontal";
