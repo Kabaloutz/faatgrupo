@@ -20,8 +20,8 @@ export default function Home() {
 
     const [ffLayer, setFfLayer] = useState(0)
     const { scrollYProgress } = useViewportScroll()
-    const scaleAnim = useTransform(scrollYProgress, [0, 0.05, 0.10], [800, 500, 0])
-    const yPosAnim = useTransform(scrollYProgress, [0, 0.5, 1], [0, 100, 200])
+    const widthAnim = useTransform(scrollYProgress, [0.2, 0.3], [1000, 0])
+    const heightAnim = useTransform(scrollYProgress, [0, 0.05, 0.10], [0, 100, 200])
     const zRotAnim = useTransform(scrollYProgress, [0, 0.5, 1], [0, 3, 0])
     scrollYProgress.onChange(x => {
         setFfLayer(x > 0.4 ? -1 : 0)
@@ -40,40 +40,16 @@ export default function Home() {
                 {/* Menu */}
                 <Menu />
                 {/* Carrossel */}
-                <motion.div style={{ width: scaleAnim }}>
+                <motion.div style={{ position:"relative",y:0, height: widthAnim }}>
                    <Carrossel />
                 </motion.div>
                 {/* Carrossel */}
-                <motion.div style={{ width: scaleAnim }}>
+                <motion.div style={{  }}>
                    <Painel />
                 </motion.div>
-                <motion.div initial="hidden" animate="visible"
-                whileHover={{
-                        width: 0,
-                        display: "flex",
-                        transition: {
-                            duration: 1
-                        },
-                    }}
-                    variants={{
-                        hidden: {
-                            scale: .8,
-                            opacity: 0
-                        },
-                        visible: {
-                            scale: 1,
-                            opacity: 1,
-                            transition: {
-                                delay: .4
-                            }
-                        },
-                    }}>
-                    <Display name="cabeçalho" children={Cabecalho} />
+                <motion.div >
+                    <Rodape />
                 </motion.div>
-                <Display name="cabeçalho" />
-                <Display name="cabeçalho" />
-                <Display name="cabeçalho" />
-                <Display name="cabeçalho" />
             </VStack>
 
         </Flex >
