@@ -50,10 +50,8 @@ const Carrossel: React.FC = () => {
 
 
 
-    return (
-        <Box >
+    return (       
             <Image src={1 + ".jpg"} />
-        </Box>
     )
 }
 export default Carrossel

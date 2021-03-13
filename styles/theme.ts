@@ -14,6 +14,8 @@ const theme = extendTheme({
       borderColor: "orange.500",
     },
     Display: {
+      position: "relative",
+      justifyContent:"end",
       w:"100%",
       h:"300px",
       bg: "teal.500",

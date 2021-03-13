@@ -20,7 +20,7 @@ export default function Home() {
 
     const [ffLayer, setFfLayer] = useState(0)
     const { scrollYProgress } = useViewportScroll()
-    const scaleAnim = useTransform(scrollYProgress, [0, 0.05, 0.10], [150, 500, 800])
+    const scaleAnim = useTransform(scrollYProgress, [0, 0.05, 0.10], [800, 500, 0])
     const yPosAnim = useTransform(scrollYProgress, [0, 0.5, 1], [0, 100, 200])
     const zRotAnim = useTransform(scrollYProgress, [0, 0.5, 1], [0, 3, 0])
     scrollYProgress.onChange(x => {
@@ -30,7 +30,6 @@ export default function Home() {
         <Flex justify="center">
 
             <VStack
-                bg="black"
                 h="300vh"
                 w="70vw"
                 spacing={8}
@@ -44,10 +43,9 @@ export default function Home() {
                 <motion.div style={{ width: scaleAnim }}>
                    <Carrossel />
                 </motion.div>
-
                 {/* Carrossel */}
                 <motion.div style={{ width: scaleAnim }}>
-                   <Carrossel />
+                   <Painel />
                 </motion.div>
                 <motion.div initial="hidden" animate="visible"
                 whileHover={{
