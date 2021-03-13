@@ -14,8 +14,7 @@ import BarraBanners from "../components/barraBanners";
 {/* comentario */ }
 export default function Designsystem() {
     return (
-        <>
-            <GlobalStyles />            
+        <>          
             <Box h="100%" w="70%" marginStart="15%">
                 <Box >
                     <Box>
