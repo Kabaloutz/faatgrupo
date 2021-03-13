@@ -13,6 +13,13 @@ const theme = extendTheme({
       color: "teal.700",
       borderColor: "orange.500",
     },
+    Display: {
+      w:"100%",
+      h:"300px",
+      bg: "teal.500",
+      color: "teal.700",
+      borderColor: "gray",
+    },
     container: {
       mt:"5",
       mb:"5",
