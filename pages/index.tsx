@@ -27,33 +27,16 @@ export default function Home() {
         setFfLayer(x > 0.4 ? -1 : 0)
     })
     return (
-        <Flex justify="center">
-
-            <VStack
-                h="300vh"
-                w="70vw"
-                spacing={8}
-                align="stretch"
-            >
-                {/* Cabeçalho */}
-                <Cabecalho />
-                {/* Menu */}
-                <Menu />
-                {/* Carrossel */}
-                <motion.div style={{ position:"relative",y:0, height: widthAnim }}>
-                   <Carrossel />
-                </motion.div>
-                {/* Carrossel */}
-                <motion.div style={{  }}>
-                   <Painel />
-                </motion.div>
-                <motion.div >
-                    <Rodape />
-                </motion.div>
-            </VStack>
-
-        </Flex >
+        <Flex justifyItems="center"  >
+            <Spacer />
+            <Box w="60vw" >
+                <Cabecalho></Cabecalho>
+                <Menu></Menu>
+                <Carrossel ></Carrossel>
+                <Painel></Painel>                
+                <Rodape />
+            </Box>
+            <Spacer />
+        </Flex>
     )
 }
-
-

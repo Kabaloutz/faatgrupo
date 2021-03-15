@@ -50,8 +50,28 @@ const Carrossel: React.FC = () => {
 
 
 
-    return (       
-            <Image src={1 + ".jpg"} />
+    return ( 
+        <Flex dir="row" mb="4" justifyContent="center" >
+        <Box>
+            <IconButton h="100%" onClick={Retroceder}
+                colorScheme="gray"
+                aria-label="Call Segun"
+                size="lg"
+                icon={<ArrowLeftIcon />}
+            />
+        </Box>
+        <Box w="100%">
+        <Image w="100%"  src={1 + ".jpg"} />
+        </Box>
+        <Box>
+            <IconButton h="100%" onClick={Avancar}
+                colorScheme="gray"
+                aria-label="Call Segun"
+                size="lg"
+                icon={<ArrowRightIcon />}
+            />
+        </Box>
+    </Flex>
     )
 }
 export default Carrossel
