@@ -8,19 +8,19 @@ const Painel: React.FC = () => {
             <Wrap w="100%" >
             
                 <WrapItem>
-                    <Quadro />
+                    <Quadro titulo="fdsf" texto="dfvs"/>
                 </WrapItem>
                 <Spacer />
                 <WrapItem>
-                    <Quadro />
+                    <Quadro titulo="fdsf" texto="dfvs"/>
                 </WrapItem>
                 <Spacer />
                 <WrapItem>
-                    <Quadro />
+                    <Quadro titulo="fdsf" texto="dfvs"/>
                 </WrapItem>
                 <Spacer />
                 <WrapItem>
-                    <Quadro />
+                    <Quadro titulo="fdsf" texto="dfvs"/>
                 </WrapItem>
             </Wrap>
         </HStack>

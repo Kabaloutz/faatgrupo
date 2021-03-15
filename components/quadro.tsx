@@ -1,17 +1,35 @@
-import { Box, Container, Flex, HStack, Text, Image, Link, Heading } from '@chakra-ui/react';
-import React from 'react';
+import { Box, Container, Flex, HStack, Text, Image, Link, Heading, ColorModeProvider, color, ColorModeScript, Button } from '@chakra-ui/react';
 
-const Quadro: React.FC = () => {
+import React, { useState } from 'react';
+
+interface Arg {
+    titulo: string;
+    texto: string;
+}
+const Quadro = ({ titulo, texto }: Arg) => {
+    const Normal = {
+        w: "500px",
+        h: "200px",
+        bg: "red",
+    };
 
     return (
-        <Box w="200px" h="300px" bg="white" align="center"  shadow="xl" color="preto.100" >
-            <Image m="2" src="/t_001.jpg"  ></Image>
-            <Heading m="2" size="md" >"HISTÓRIA"</Heading>
-            <Text>
-                "Conheça mais sobre a história do grupo Faat."
-            </Text>
+        <Box w={Normal.w} bg={Normal.bg} dir="Row">
+            <Box>
+                <Image m="2" src="/t_001.jpg" ></Image>
+            </Box>
+            <Box>
+            <Box>
+                <Heading m="2" size="md" >{titulo}</Heading>
+            </Box>
+            <Box>
+                <Text>
+                    {texto}
+                    <a> dssa</a>
+                </Text>
+            </Box>
+            </Box>           
         </Box>
-        
     )
 
 }

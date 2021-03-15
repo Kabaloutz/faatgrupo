@@ -14,9 +14,6 @@ const Menu: React.FC = () => {
 
 
     return (
-        <Box >
-            <motion.div style={{
-            }}>
                 <Flex bg="elementos.agua" h="40px" mb="4" alignItems="center" justifyContent="center" flexDir="row" >
                     <Spacer />
                     <Box ><Link href="/">HOME</Link></Box>
@@ -38,8 +35,6 @@ const Menu: React.FC = () => {
                     <Box ><Link href="/contatos">CONTATOS</Link></Box>
                     <Spacer />
                 </Flex>
-            </motion.div>
-        </Box>
     )
 }
 export default Menu;
